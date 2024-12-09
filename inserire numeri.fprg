@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="inserire numeri"/>
+        <attribute name="authors" value="Silvia"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-12-06 11:56:19 "/>
+        <attribute name="created" value="U2lsdmlhO0hQOzIwMjQtMTEtMjk7IjA2OjI1OjI1ICI7MTk2NA=="/>
+        <attribute name="edited" value="U2lsdmlhO0hQOzIwMjQtMTItMDE7IjEyOjI2OjEyICI7MzsyMDU5"/>
+        <attribute name="edited" value="SVRTO0lUUy1QMTY7MjAyNC0xMi0wNjsiMTE6NTY6MTkgIjsxOzIwMTE="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="numero" type="Integer" array="False" size=""/>
+            <declare name="contatore" type="Integer" array="False" size=""/>
+            <assign variable="contatore" expression="0"/>
+            <declare name="somma" type="Integer" array="False" size=""/>
+            <assign variable="somma" expression="0"/>
+            <declare name="media" type="Real" array="False" size=""/>
+            <declare name="risposta" type="String" array="False" size=""/>
+            <assign variable="risposta" expression="&quot;si&quot;"/>
+            <declare name="max" type="Integer" array="False" size=""/>
+            <assign variable="max" expression="0"/>
+            <declare name="min" type="Integer" array="False" size=""/>
+            <assign variable="min" expression="0"/>
+            <while expression="risposta = &quot;si&quot;">
+                <output expression="&quot;Scrivi un numero&quot;" newline="True"/>
+                <input variable="numero"/>
+                <if expression="contatore = 0">
+                    <then>
+                        <assign variable="min" expression="numero"/>
+                    </then>
+                    <else/>
+                </if>
+                <output expression="&quot;Se vuoi continuare digita si&quot;" newline="True"/>
+                <input variable="risposta"/>
+                <assign variable="somma" expression="somma+numero"/>
+                <assign variable="contatore" expression="contatore+1"/>
+                <if expression="max&lt;numero">
+                    <then>
+                        <assign variable="max" expression="numero"/>
+                    </then>
+                    <else/>
+                </if>
+                <if expression="min&gt;numero">
+                    <then>
+                        <assign variable="min" expression="numero"/>
+                    </then>
+                    <else/>
+                </if>
+            </while>
+            <assign variable="media" expression="(somma)/(contatore)"/>
+            <output expression="&quot;I numeri inseriti sono &quot; &amp; contatore &amp; &quot;, la media dei numeri inseriti &#232; &quot; &amp; media &amp; &quot;, il numero maggiore &#232; &quot; &amp; max &amp; &quot;, il numero minore &#232; &quot; &amp; min" newline="True"/>
+        </body>
+    </function>
+    <function name="max" type="Integer" variable="max">
+        <parameters>
+            <parameter name="numero" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="max" type="Integer" array="False" size=""/>
+        </body>
+    </function>
+</flowgorithm>
