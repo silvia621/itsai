@@ -14,7 +14,7 @@
         <body>
             <declare name="numero" type="Integer" array="False" size=""/>
             <declare name="contatore" type="Integer" array="False" size=""/>
-            <assign variable="contatore" expression="0"/>
+            <assign variable="contatore" expression="1"/>
             <declare name="somma" type="Integer" array="False" size=""/>
             <assign variable="somma" expression="0"/>
             <declare name="media" type="Real" array="False" size=""/>
